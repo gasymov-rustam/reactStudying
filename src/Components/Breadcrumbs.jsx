@@ -1,4 +1,4 @@
-export default function Breadcrumbs({ way, symbol }) {
+export default function Breadcrumbs({ way, symbol="/"}) {
     const list = {
         display: "flex",
     };
@@ -21,7 +21,8 @@ export default function Breadcrumbs({ way, symbol }) {
                         <li style={currentField} key={item.id}>
                             <a style={currentLink} href={item.link}>
                                 {item.text}
-                                {"\u00A0\u00A0"} {`${symbol || "/"}`}
+                                {"\u00A0\u00A0"} {symbol}
+                                {/* {"\u00A0\u00A0"} {`${symbol || "/"}`} */}
                             </a>
                         </li>
                     ) : (
